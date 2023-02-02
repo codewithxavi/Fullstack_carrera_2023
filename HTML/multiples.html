@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectroes múltiples</title>
+
+    <style>
+        .centrar {
+            text-align: center;
+        }
+
+        /*.red {
+            color: red;
+        }*/
+
+        /* afecta a todos los elementos con el atributo class="saludos" o class="red" */
+        .saludos,
+        .red {
+            text-align: center;
+            color: red;
+        }
+
+        h1{
+            color: blueviolet;
+        }
+
+        h3{
+            color: chartreuse;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>SELECTORES MÚLTIPLES</h1>
+    <!-- aplican los estilos de los selectores .centrar y .red -->
+    <h3>Subtitular 3</h3>
+    <p class="centrar red">Hola</p>
+    <!-- aplican los estilos del selector .centrar -->
+    <p class="centrar red">Buenos días</p>
+
+    <p class="saludos red">Hola</p>
+    <p class="saludos">Buenos días</p>
+    <p class="red">¿Cómo estás?</p>
+</body>
+
+</html>

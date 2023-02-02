@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Width y Height</title>
+    <style>
+        div.ex1 {
+            width: calc(100% - 40px);
+            background-color: blue;
+        }
+
+        div.ex2 {
+            width: calc(100% - 40px);
+            padding: 25px;
+            border: 10px solid;
+            /*outline: 10px solid blue;*/
+
+            /* Si se elimina esa propiedad, la anchura del elemento es 300+25+25=350px */
+            box-sizing: inherit;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Width And Height</h1>
+    <div class="ex1">Texto</div>
+    <br>
+    <div class="ex2">Texto</div>
+    <br>
+    <p class="ex1">Texto</p>
+</body>
+
+</html>

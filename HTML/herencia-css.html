@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herencia</title>
+    <style>
+        body{
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        #green-and-bold {
+            font-weight: bold;
+            color: green;
+        }
+
+        #green-and-lighter {
+            font-weight: lighter;
+            color: green;
+        }
+
+        #red-and-bold {
+            font-weight: bold;
+            color: inherit;
+        }
+
+        div {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="green-and-bold">
+        <!-- se heredan las propiedades del selector #green-and-bold -->
+        <div>Hola</div>
+    </div>
+
+    <p>Hola</p>
+
+    <div id="green-and-lighter">
+        <!-- solamente se aplica la propiedad color del selector #green-and-lighter -->
+        <!-- la propiedad font-weight se toma del selector h1 (automáticamente impuesto por
+        el navegador) y con mayor especificidad que una propiedad heredadad -->
+        <h1>Hola</h1>
+    </div>
+
+    <div id="green-and-lighter">
+        <!-- orden de la especificidad: #red-and-bold > div > #green-and-lighter -->
+        <!-- sin embargo, se aplica la propiedad color del selector #green-and-lighter porque el
+        selector más específico (#red-and-bold) indica que se herede esa propiedad -->
+        <div id="red-and-bold">
+            Hola
+        </div>
+    </div>
+
+</body>
+
+</html>

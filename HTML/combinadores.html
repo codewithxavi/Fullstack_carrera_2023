@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinadores</title>
+    <style>
+        /* se aplica a un elemento p que esté contenido dentro de un elemento div y que no
+        necesariamente tiene que ser ancestro directo */
+        div p {
+            background-color: yellow;
+        }
+
+        p {
+            background-color: red;
+        }
+
+
+        h2+p {
+            color: red;
+        }
+
+        /*Adyacentes general */
+        h2~p {
+            color: rgb(60, 243, 121);
+        }
+
+        div>p {
+            color: rgb(233, 85, 166);
+            
+        }
+
+            
+    </style>
+</head>
+
+<body>
+    <div id="hola">
+        <!-- se aplica la propiedad background-color de la combinación de selectores div p, que
+        es más específica que el selector p -->
+        <!-- sin embargo, la combinación de selectores div p no sería más específica que otros
+        como #hola p o .saludos -->
+        <p class="saludos">Buenos días</p>
+        <section>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem debitis placeat unde! Et illum sit
+                earum corporis laborum ratione enim repudiandae voluptates, reprehenderit, beatae in placeat nemo veniam
+                fugit sint.
+            </p>
+        </section>
+    </div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur omnis corporis, magnam illo quam dolorum?
+        Quasi reiciendis consequuntur sit, temporibus obcaecati deleniti ab doloremque inventore dolor nostrum et
+        placeat repudiandae.</p>
+
+
+    <div>
+        <h2>NO aplica</h2>
+        <p>Aplica</p>
+        <h2>NO aplica</h2>
+        <h3>NO aplica</h3>
+        <p>NO aplica</p>
+        <h2>NO aplica</h2>
+        <p>Aplica</p>
+        <p>Aplica? En este caso no se le aplica pq no es adyacente a continuación</p>
+        <section>
+            <p>Aplica?</p>
+        </section>
+    </div>
+</body>
+
+</html>
