@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3 página 106</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0px;
+            font-size: 1.5em;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        header.main-header {
+            /* background-color: #66a3ff81; */
+            background-image: linear-gradient(to right, rgb(35, 63, 187), rgba(218, 34, 34, 0.87));
+            padding: 8px 16px;
+            width: 100%;
+            display: inline-block;
+            color: whitesmoke;
+        }
+
+        li.main-nav-item {
+            display: inline-block;
+            font-size: clamp(1rem, 0rem + 4vw, 1.6rem);
+
+        }
+
+        ul.main-nav-items {
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+
+        }
+
+        nav.main-nav {
+            display: inline-block;
+            width: calc(100% - 220px);
+            text-align: right;
+        }
+
+        .main-header>div {
+            display: inline-block;
+        }
+
+        h1.main-header-brand {
+            color: #fafafa;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: clamp(1rem, 0rem + 4vw, 1.5rem);
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div>
+            <a href="#" class="main-header-brand">
+                <img width="200" src="https://dwglogo.com/wp-content/uploads/2017/12/La_Caixa_logo.png"
+                    alt="Logo del Banco">
+            </a>
+            <!-- <h1 class="main-header-brand">La Caixa</h1> -->
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav-items">
+                <li class="main-nav-item">Inicio</li>
+                <li class="main-nav-item">Servicios</li>
+                <li class="main-nav-item">Acceso cliente</li>
+                <li class="main-nav-item">FAQ</li>
+                <li class="main-nav-item">Contacto</li>
+            </ul>
+        </nav>
+    </header>
+</body>
+
+</html>
