@@ -12,4 +12,3 @@ console.log(alert1, alert2, alert3);
 
 const nombre = prompt("Escriba su nombre", "Escriba aquí");
 console.log(nombre);
-
