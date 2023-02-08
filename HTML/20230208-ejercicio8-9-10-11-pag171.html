@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        // Ejercicio 8
+        for (let i = 50; i > 0; i--) {
+            document.write(i + ",");
+        }
+
+        document.write("<hr>");
+
+
+        // Ejercicio 9
+        for (let i = 0; i <= 10; i++) {
+            let resultado = 5 * i;
+            document.write(`<br>5*${i}=${resultado}`);
+        }
+
+        document.write("<hr>");
+
+        // // Ejercicio 9 +
+        for (let i = 0; i <= 10; i++) {
+            for (let j = 0; j <= 10; j++) {
+                let resultado = i * j;
+                document.write(`<br>${i} * ${j} = ${resultado}`);
+            }
+        }
+
+        document.write("<hr>");
+
+        // Ejercicio 10
+        let palabra = prompt("Introduce una palabra", "Harry Potter");
+
+        for (let i = 0; i < 10; i++) {
+            document.write("<br>" + palabra);
+        }
+
+        // Ejercicio 11
+        let numero = prompt("Introduce un numero", "1");
+
+        let numeroParseado = parseInt(numero);
+
+        while (numeroParseado > 0) {
+            numeroParseado--;
+            document.write(`${numeroParseado},`);
+        }
+
+        // for(let a=0; a<numeroParseado; a++){
+        //     document.write("<br>" + numeroParseado + "<br>");
+        //     numeroParseado--;
+        // }
+
+        
+
+    </script>
+</body>
+
+</html>

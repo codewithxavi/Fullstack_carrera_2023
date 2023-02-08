@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+
+<body>
+    <script>
+        // const sumar = (a, b) => a + b;
+        // const restar = (a, b) => a - b;
+        // const multiplicar = (a, b) => a * b;
+        // const dividir = (a, b) => a / b;
+
+        // console.log(sumar(2, 3)); // 5
+        // console.log(restar(5, 2)); // 3
+        // console.log(multiplicar(3, 4)); // 12
+        // console.log(dividir(10, 2)); // 5
+
+        const sumar = (a, b, callback) => callback(a + b);
+        const restar = (a, b, callback) => callback(a - b);
+        const multiplicar = (a, b, callback) => callback(a * b);
+        const dividir = (a, b, callback) => callback(a / b);
+
+        const resultado = result => console.log(`El resultado es: ${result}`);
+
+        sumar(2, 3, resultado); // El resultado es: 5
+        restar(5, 2, resultado); // El resultado es: 3
+        multiplicar(3, 4, resultado); // El resultado es: 12
+        dividir(10, 2, resultado); // El resultado es: 5
+
+
+    </script>
+</body>
+
+</html>
