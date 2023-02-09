@@ -40,25 +40,33 @@
         let palabra = prompt("Introduce una palabra", "Harry Potter");
 
         for (let i = 0; i < 10; i++) {
-            document.write("<br>" + palabra);
+            document.write("<br>" + palabra + "<br>");
         }
 
         // Ejercicio 11
-        let numero = prompt("Introduce un numero", "1");
+        let numero = prompt("Introduce un numero", "Introduce el numero positivo: ");
 
-        let numeroParseado = parseInt(numero);
+        // let numeroP = parseInt(numero);
 
-        while (numeroParseado > 0) {
-            numeroParseado--;
-            document.write(`${numeroParseado},`);
-        }
+        // while (numero > 0) {
+        //     document.write(`${numero},`);
+        //     numero--;
+        // }
 
         // for(let a=0; a<numeroParseado; a++){
         //     document.write("<br>" + numeroParseado + "<br>");
         //     numeroParseado--;
         // }
 
-        
+        for (let i = numero; i >= 0; i--){
+            if (i > 0){
+                document.write(i + ", ");
+            } else {
+                document.write(i);
+            }
+        }
+
+
 
     </script>
 </body>

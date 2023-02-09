@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Ejemplos
+        // while
+        let contador1 = 0;
+        while (contador1 <= 5) {
+            contador1++;
+        }
+        // 6
+        console.log(contador1);
+        // do-while
+        let contador2 = 0;
+        do {
+            contador2++;
+        } while (contador2 <= 5);
+        // 6
+        console.log(contador2);
+
+        // ./Fin Ejemplos
+
+
+        let ejercicio8 = 50;
+        let i = 0;
+        // Ejercicio 8 WHILE
+        while (i < ejercicio8) {
+            i++;
+            document.write("<br>" + i);
+        }
+        document.write("<hr>");
+
+        // Ejercicio 9
+        let contadorTabla = 10;
+        let a = 0;
+        let numero = 5;
+        while (a <= contadorTabla) {
+            resultado = numero * a;
+            document.write(`<br>${numero}*${a}=${resultado}`);
+            a++;
+        }
+
+        document.write("<hr>");
+
+        // Ejercicio 10
+        let palabra10 = prompt("Introduce una palabra");
+        let j = 0;
+        let condicion = 10;
+
+        while (j < condicion) {
+            document.write("<br>" + palabra10 + "<br>");
+            j++;
+        }
+
+        document.write("<hr>");
+
+        // Ejercicio 11
+
+        let numeroEntero = prompt("Introduce un numero entero positivo");
+        let result = numeroEntero;
+
+        while (result >= 0) {
+            // if (result > 0) {
+            //     document.write(result + ",")
+            // } else {
+            //     document.write(result);
+            // }
+
+            result > 0 ? document.write(result + ",") : document.write(result);
+            result--;
+        }
+
+        document.write("<hr>");
+
+        // Ejercicio extra multiplicar
+        let b = 1;
+        while (b <= 10) {
+            let c = 1;
+            while (c <= 10) {
+                console.log(b + " x " + c + " = " + b * c);
+                c++;
+            }
+            b++;
+        }
+
+        document.write("<hr>");
+
+
+
+
+
+    </script>
+
+</body>
+
+</html>
