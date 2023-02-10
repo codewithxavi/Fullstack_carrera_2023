@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios Pag 197</title>
+</head>
+
+<body>
+    <script>
+        // declaración de un objeto vacío (posteriormente son agregados un atributo y unmétodo)
+        const coche = {};
+        coche.contenido = 20;
+
+        coche.adelante = () => {
+            console.log('Arrancando...');
+        };
+
+        console.log(coche.contenido);
+        coche.adelante();
+
+        const Persona = function (name) {
+            this.name = name;
+        };
+        const yo = new Persona('alejandro');
+
+        console.log(yo.name);
+
+        const persona2 = {
+            nombre: 'Alejandro',
+            'lugar de residencia': 'Madrid'
+        };
+
+        console.log(persona2['lugar de residencia']);
+
+
+        const coche1 = { marca: 'Ford', modelo: 'Focus' };
+        const coche2 = { marca: 'Ford', modelo: 'Focus' };
+        
+
+
+        // Ejercicio 1: escribe un programa que liste el nombre de las propiedades del siguiente
+        // objeto utilizando las dos formas comentadas con anterioridad: { name : "David Rayy",
+        // sclass : "VI", rollno : 12 }
+
+        const objetoEjercicio1 = {
+            name: "David Rayy",
+            sclass: "VI",
+            rollno: 12
+        };
+
+        // claves es un array
+        const keys = Object.keys(objetoEjercicio1);
+
+        document.write(keys);
+
+        // Ejercicio 2: escribe un programa que declare el siguiente objeto: { x: 1, y: 2 }. A
+        // continuación, elimina la propiedad x y añade una propiedad nueva z con valor 5.
+        let objetoEjercicio2 = { x: 1, y: 2 }
+
+        delete objetoEjercicio2.x;
+
+        console.log(objetoEjercicio2 + "<hr>");
+
+
+    </script>
+</body>
+
+</html>

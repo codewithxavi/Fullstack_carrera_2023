@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+</head>
+
+<body>
+    <script>
+        const frutas = ['Banana', 'Orange', 'Apple', 'Mango'];
+
+        const lon = frutas.length;
+        // for clásico
+        for (let i = 0; i < lon; i++) {
+            document.write(frutas[i]);
+            document.write("<br>");
+        }
+        // for...of
+        // 
+        for (let fruta of frutas) {
+            document.write(fruta + " ");
+            document.write("<br>");
+        }
+
+        document.write("<hr>");
+
+        const coches = ["Ferrari", "Audi", "Mercedes"];
+        for (let coche of coches) {
+            document.write(coche);
+            document.write("<br>");
+        }
+
+        document.write("<hr>");
+        document.write(coches.toString());
+
+        document.write("<hr>");
+        document.write(coches.join(' pepito '));
+
+        document.write("<hr>");
+
+        let peliculas = ["Piratas Caribe", "Harry Potter", "Spiderman", "Robin Hood"];
+
+        document.write(peliculas.unshift("Batman"));
+        document.write("<hr>");
+        document.write(peliculas);
+        document.write("<hr>");
+
+        document.write("POP: " + peliculas.pop());
+        document.write("<hr>");
+
+        document.write("SHIFT: " + peliculas.shift());
+
+        // Crea un array programas añadirle tres programas o lenguajes
+        let programas = [];
+
+        document.write("<hr>");
+        programas.push("PYTHON", "JAVASCRIPT", "JAVA");
+        document.write("Array inicial de programas: " + programas);
+        document.write("<hr>");
+
+        document.write("Shift: " + programas.shift());
+        document.write("<hr>");
+        document.write("Pop: " + programas.pop());
+        document.write("<hr>");
+        document.write("Unshift: " + programas.unshift());
+        document.write("<hr>");
+        document.write(programas);
+
+        programas.push("PYTHON", "JAVASCRIPT", "JAVA");
+        delete programas[0];
+        document.write("<hr>");
+
+        document.write(programas + "<hr>");
+
+        // eliminar elementos
+        const frutas1 = ['Banana', 'Orange', 'Apple', 'Mango'];
+        // ["Orange", "Apple"]
+        document.write(frutas1.splice(1, 2) + "<hr>");
+        // ["Banana", "Mango"]
+        document.write(frutas1 + "<hr>");
+
+        // añadir elementos
+        const frutas2 = ['Banana', 'Orange', 'Apple', 'Mango'];
+        document.write(frutas2.splice(2, 2, 'Lemon', 'Kiwi') + "<hr>");
+        document.write(frutas2);
+        // ["Banana", "Orange", "Lemon", "Kiwi", "Apple", "Mango"]
+        console.log(frutas2);
+
+        document.write("<hr>");
+
+        let programas2 = ["prog1", "prog2", "prog3", "prog4", "prog5"];
+        document.write(programas2.splice(3, 1, "prog10", "prog11") + "<hr>");
+        programas2[3] = "prog20";
+        document.write(programas2 + "<hr>");
+
+        const myGirls = ['Cecilie', 'Lone'];
+        const myBoys = ['Emil', 'Tobias', 'Linus'];
+        const myChildren = myGirls.concat(myBoys);
+        // ["Cecilie", "Lone", "Emil", "Tobias", "Linus"]
+        console.log(myChildren);
+
+        
+
+    </script>
+</body>
+
+</html>

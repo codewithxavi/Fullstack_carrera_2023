@@ -83,36 +83,42 @@
         // Ejercicio 6: escribe un programa que devuelva si un string es palíndromo (se escribe igual
         // hacia delante y hacia detrás). Ejemplo: "sometemos".
 
-        let stringEjercicio6 = "sometemos", letra, frase = "", fraseRevertida;
+        let palindromo = "aibofobia", letra, frase = "", fraseRevertida, inverso = "";
 
-        fraseRevertida = stringEjercicio6.split('').reverse().toString();
+        // fraseRevertida = palindromo.split('').reverse().toString();
 
-        var newFraseRevertida = fraseRevertida.replaceAll(",", "");
-        console.log(newFraseRevertida);
+        // var newFraseRevertida = fraseRevertida.replaceAll(",", "");
 
-        // for (let i = stringEjercicio6.length; i >= 0; i--) {
-        //     letra = stringEjercicio6.charAt(i);
-        //     frase += letra;
-        // }
+        for (let i = palindromo.length - 1; i >= 0; i--) {
+            inverso += palindromo.charAt(i);
 
-        console.log(frase);
-        console.log(stringEjercicio6);
-        console.log(fraseRevertida);
-
-        if (newFraseRevertida == stringEjercicio6) {
-            document.write(`La palabra ${frase} es un palíndromo`)
-        } else {
-            document.write(`La palabra ${frase} NO es un palíndromo`)
         }
+
+        if (palindromo === inverso) {
+            document.write(`La palabra ${palindromo} es un palindro`);
+        }
+        else {
+            document.write(`La palabra ${palindromo} NO es un palindro`);
+        }
+
+
+
+        // if (newFraseRevertida == palindromo) {
+        //     document.write(`La palabra ${frase} es un palíndromo`)
+        // } else {
+        //     document.write(`La palabra ${frase} NO es un palíndromo`)
+        // }
 
         document.write("<hr>");
 
 
         // Ejercicio 7: escribe un programa que elimine el último carácter de un string.
-        let ejercicio7 = "Hola Javi";
+        let ejercicio7 = "Hola Javii";
         let caracter7 = ejercicio7.charAt(ejercicio7.length - 1);
-        let resultado7 = ejercicio7.replace(caracter7, "");
+        let resultado7 = ejercicio7.replace(caracter7, ""); // funciona MAL
         document.write("Ejercicio 7: El resultado de eliminar el ultimo caracter es: " + resultado7);
+
+
 
         document.write("<hr>");
 
@@ -131,8 +137,18 @@
 
         // Ejercicio 9: escribe un programa que convierta en mayúsculas la primera letra de cada
         // palabra de un string.
-        let palabra9 = "holksadkdsads";
-        document.write(palabra9.charAt(0).toUpperCase());
+        let str9 = "Hola Javi qu etal"
+        let words = str9.split(" "); // separamos las palabras por los espacios
+        let capitalizedWords = [];
+
+        for (let i = 0; i < words.length; i++) {
+            capitalizedWords.push(words[i].charAt(0).toUpperCase() + words[i].slice(1));
+        }
+
+        let result9 =  capitalizedWords.join(" ");
+
+        document.write(result9);
+
 
         document.write("<hr>");
 

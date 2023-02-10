@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios</title>
+</head>
+
+<body>
+    <script>
+        // Ejercicio 1: escribe un programa que genere un array de 6 valores de tipo number y sean mostrados en pantalla utilizando un bucle for clásico y un bucle for...of
+
+        document.write("Ejercicio 1: ");
+
+        document.write("<hr>");
+
+        let ejercicio1 = [1, 2, 3, 4, 5, 6];
+        for (let i = 1; i <= ejercicio1.length; i++) {
+            document.write(i);
+        }
+
+        document.write("<hr>");
+
+        for (let numero of ejercicio1) {
+            document.write(numero);
+        }
+
+        document.write("<hr>");
+
+        let edades = [];
+        for (let i = 0; i < 6; i++) {
+            edades.push(Math.floor(Math.random() * 100));
+        }
+
+        document.write(edades);
+
+        document.write("<hr>");
+
+
+        document.write("Ejercicio 2: ");
+
+        // Ejercicio 2 : escribe un programa que almacene los nombres de tres colores en un array y
+        // los muestre por pantalla mediante un bucle for...of
+        let colores2 = ["blue", "red", "yellow"];
+
+        for (let color of colores2) {
+            document.write(color + " ");
+        }
+
+        document.write("<hr>");
+
+        // Ejercicio 3: escribe un programa con un array que almacene los nombres de tres colores.
+        // A continuación, crea otro array vacío e inserta en él todos los elementos del primer array
+        // mediante un for...of y el método push.
+        let colores3 = ["white", "smokehouse", "black"];
+        let colores33 = [];
+
+        for (let col of colores3) {
+            colores33.push(col);
+        }
+
+        document.write("Ejercicio 3: " + colores33 + "<hr>");
+
+        // Ejercicio 4: escribe un programa que dado dos arrays, devuelva el número de elementos que son iguales.
+        let personas4 = ["Xavi","Verónica","Aleix","Clara"];
+        let personas44 = ["Xavi","Verónica","Aleix","Clara","Asensio"];
+
+        // let count = 0;
+        // for (let i = 0; i < personas4.length; i++) {
+        //     if (personas44.includes(personas4[i])) {
+        //         count++;
+        //     }
+        // }
+
+        let contador = 0;
+        for (let i=0; i<personas4.length; i++){
+            for (let j=0; j<personas44.length; j++){
+                if (personas4[i] == personas44[j]){
+                    contador++;
+                }   
+            }
+        }
+
+        document.write("Resultado: " + contador + "<hr>");
+
+        
+        // document.write("Numero de elementos iguales: " + count + "<hr>");
+
+        // Ejercicio 5: escribe un programa que extraiga una porción del array a partir de una posición inferior y una superior y lo almacene en otro array.
+        let array5 = ["Xavi", "Javi", "Xavier", "Javier", "Juan", "Juanito"];
+        let posicionInferior = 2;
+        let posicionPosterior = 5;
+        let array5Resultante = array5.splice(posicionInferior, posicionPosterior);
+        document.write(array5Resultante + "<hr>");
+
+
+        // ordenación ascendente de números enteros mediante una función de comparación
+        const puntos = [40, 100, 1, 5, 25, 10];
+        // función para ordenación ascendente
+        const puntos2 = puntos.sort((a, b) => a - b);
+
+        // [1, 5, 10, 25, 40, 100]
+        document.write(puntos2 + "<hr>");
+
+
+        let coches3 = [
+            { type: 'Volvo', year: 2016 },
+            { type: 'Saab', year: 2001 },
+            { type: 'BMW', year: 2010 }
+        ];
+
+        // función para ordenar ascendentemente por la propiedad year
+        let cochesOrdenados = coches3.sort((a, b) => a.year - b.year);
+        console.log(cochesOrdenados);
+       
+
+        // Ejercicio 2 del proyecto: escribe un programa que almacene los objetos creados en el ejercio anterior del proyecto dentro de un array (un array por cada modelo de datos). A continuación, recorre cada uno de los arrays y muestra todas propiedades.
+
+
+
+
+
+    </script>
+</body>
+
+</html>
