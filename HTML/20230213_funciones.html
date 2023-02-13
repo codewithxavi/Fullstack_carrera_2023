@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        function sumar(a, b) {
+            console.log(a + b);
+        }
+        sumar(2, 3);
+        sumar();
+        sumar(1, 2);
+        sumar(1, 2, 3, 4);
+        sumar('1', 2);
+        sumar(1, '2');
+
+        const sumar1 = function (a, b) { // Constante de tipo función
+            console.log(a + b);
+        };
+        // 5
+        sumar1(5, 2);
+
+        const a = {
+            f: function () {
+                console.log('Hola');
+            }
+        };
+
+        a.f();
+        a['f']();
+
+        (function saludar() {
+            console.log('Hola desde una función autoejecutable');
+        })();
+
+        // error
+        // saludar();
+
+        function hacerAlgo(a, b) {
+            this.a = a;
+            this.b = b;
+        }
+
+        // creación del objeto
+        const b = new hacerAlgo(1, 2);
+        // error porque b es un objeto
+        // b();
+        // 1
+        console.log(b.a);
+        // 2
+        console.log(b.b);
+        // undefined
+        console.log(this.a);
+
+
+        // función normal
+        function calculo(altura) {
+            return 5 * altura / 2;
+        };
+
+        function triangulo(base, altura) {
+            return base * altura / 2;
+        }
+
+        console.log("El area de un triangulo: " + triangulo(1, 2));
+
+        // función de flecha
+        const calculo1 = (altura) => {
+            return 5 * altura / 2;
+        };
+
+        // forma simplificada de la función de flecha
+        const calculo2 = altura => 5 * altura / 2;
+
+        console.log(calculo(2));
+
+        // setTimeout()
+
+        setTimeout(() => {
+            console.log('Esta instrucción se ejecuta después de 5 segundos');
+        }, 5000);
+
+        // setInterval()
+        setInterval(() => {
+            console.log('Esta instrucción se ejecuta cada 5 segundos');
+        }, 5000);
+
+        setTimeout(() => {
+            console.log('Hola');
+            setTimeout(() => {
+                console.log('Adiós');
+            }, 500);
+        }, 1000)
+        setTimeout(() => {
+            console.log('Buenas tardes');
+        }, 100)
+        console.log('Buenos días');
+
+    </script>
+</body>
+
+</html>

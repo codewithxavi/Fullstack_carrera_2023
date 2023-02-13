@@ -11,14 +11,16 @@
 <body>
     <script>
         // const sumar = (a, b) => a + b;
+        // const sumarSimple = (a,b) => a + b;
         // const restar = (a, b) => a - b;
         // const multiplicar = (a, b) => a * b;
         // const dividir = (a, b) => a / b;
 
         // console.log(sumar(2, 3)); // 5
+        // console.log(sumarSimple(10, 20));
         // console.log(restar(5, 2)); // 3
         // console.log(multiplicar(3, 4)); // 12
-        // console.log(dividir(10, 2)); // 5
+        // console.log(dividir(10, 2)); // 5   
 
         const sumar = (a, b, callback) => callback(a + b);
         const restar = (a, b, callback) => callback(a - b);
@@ -31,6 +33,21 @@
         restar(5, 2, resultado); // El resultado es: 3
         multiplicar(3, 4, resultado); // El resultado es: 12
         dividir(10, 2, resultado); // El resultado es: 5
+
+        setTimeout(() => {
+            console.log(sumar(2, 3, resultado)); 
+            setTimeout(() => {
+                console.log(restar(2, 3, resultado)); 
+                setTimeout(() => {
+                    console.log(multiplicar(2, 3, resultado)); 
+                    setTimeout(() => {
+                        console.log(dividir(2, 3, resultado)); 
+                    }, 4000);
+                }, 3000);
+            }, 2000);
+        }, 1000)
+      
+        console.log('Operaciones...');
 
 
     </script>
